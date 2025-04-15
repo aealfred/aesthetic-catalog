@@ -1,0 +1,205 @@
+[
+    {
+        "name": "Berkeley Art Museum and Pacific Film Archive",
+        "location": "Berkeley",
+        "year_made": 1970,
+        "style": "Brutalist",
+        "summary": "Cantilevered concrete slabs, classic brutalist massing with exposed raw surfaces.",
+        "images": [
+            "imgs/resized/Berkeley_Art_Museum.jpg"
+
+        ]
+        
+    },
+    {
+        "name": "UCLA Perloff Hall",
+        "location": "Los Angeles",
+        "year_made": 1965,
+        "style": "Modern",
+        "summary": "A functional and austere building designed for Architecture and Urban Design at UCLA. It features exposed concrete, and  a strong emphasis on rectilinear forms.",
+        "images": [
+            "imgs/resized/UCLA_Perloff.jpg"
+        ]
+    },
+    {
+        "name": "Geisel Library (UC San Diego)",
+        "location": "La Jolla",
+        "year_made": 1970,
+        "style": "Brutalist",
+        "summary": "Iconic brutalist-futurist hybrid; spaceship-like with geometric concrete arms.",
+        "images": [
+            "imgs/resized/Geisel_Library.jpg"
+        ]
+    },
+    {
+        "name": "Salk Institute",
+        "location": "La Jolla",
+        "year_made": 1965,
+        "style": "Modern",
+        "summary": "Minimalist and monumental modern architecture by Louis Kahn, with a symmetrical plaza and views of the Pacific.",
+        "images": [
+            "imgs/resized/Salk_Institute2.jpg"
+        ]
+    },
+    {
+        "name": "College of the Canyons",
+        "location": "Santa Clarita",
+        "year_made": 1970,
+        "style": "Modern",
+        "summary": "Clean concrete and stone structures with open courtyards and linear paths; minimalist modern campus design.",
+        "images": [
+            "imgs/resized/Canyons.jpg"
+        ]
+    },
+    {
+        "name": "Los Angeles Union Station",
+        "location": "Los Angeles",
+        "year_made": 1939,
+        "style": "Art Deco",
+        "summary": "Streamline Moderne and Art Deco blend with Spanish Colonial Revival; ornate interiors and monumental form.",
+        "images": [
+            "imgs/resized/LA_Union_Station.jpg"
+        ]
+    },
+    {
+        "name": "Eastern Columbia Building",
+        "location": "Los Angeles",
+        "year_made": 1930,
+        "style": "Art Deco",
+        "summary": "Turquoise terra cotta tower with copper details, one of LA's most iconic Art Deco landmarks.",
+        "images": [
+            "imgs/resized/Eastern_Columbia_Building.jpg"
+        ]
+    },
+    {
+        "name": "San Diego Central Library",
+        "location": "San Diego",
+        "year_made": 2013,
+        "style": "Post-Brutalist",
+        "summary": "Concrete civic building with steel dome and urban integration; a blend of brutalism and contemporary design.",
+        "images": [
+            "imgs/resized/San_Diego_Central_Library2.jpg"
+        ]
+    },
+    {
+        "name": "Wurster Hall (UC Berkeley)",
+        "location": "Berkeley",
+        "year_made": 1964,
+        "style": "Brutalist",
+        "summary": "Unapologetically brutal with raw, unpainted concrete and dense academic form.",
+        "images": [
+            "imgs/resized/Wurster_Hall.jpg"
+        ]
+    },
+    {
+        "name": "Marin County Civic Center",
+        "location": "San Rafael",
+        "year_made": 1962,
+        "style": "Futurist / Modern",
+        "summary": "Designed by Frank Lloyd Wright; linear concrete structure with blue domes and arched corridors.",
+        "images": [
+            "imgs/resized/Marin_County_Civic.jpg"
+        ]
+    },
+    {
+        
+        "name": "Griffith Observatory",
+        "location": "Los Angeles",
+        "year_made": 1935,
+        "style": "Art Deco",
+        "summary": "Iconic Los Angeles landmark with classical Art Deco elements and sweeping views of the city and stars.",
+        "images": [
+            "imgs/resized/Griffith_Observatory.jpg"
+        ]    
+    },
+    {
+        "name": "Caltrans District 7 Headquarters",
+        "location": "Los Angeles",
+        "year_made": 2004,
+        "style": "Post-Brutalist",
+        "summary": "Massive concrete and steel structure with futuristic lines and civic grandeur.",
+        "images": [
+            "imgs/resized/Caltrans_District.jpg"
+        ]
+    },
+    {
+        "name": "Millennium Biltmore Hotel",
+        "location": "Los Angeles",
+        "year_made": 1923,
+        "style": "Beaux-Arts / Art Deco",
+        "summary": "Combines classical ornamentation with early Art Deco touches; a historical landmark in downtown LA.",
+        "images": [
+            "imgs/resized/Mill_Biltmore.jpg"
+        ]
+    },
+    {
+        "name": "Transamerica Pyramid",
+        "location": "San Francisco",
+        "year_made": 1972,
+        "style": "Modern",
+        "summary": "Tall, futuristic pyramid-shaped skyscraper with angular lines and a glowing top beacon.",
+        "images": [
+            "imgs/resized/Transamerica_Pyramid.jpg"
+        ]
+    },
+    {
+        "name": "Getty Center",
+        "location": "Los Angeles",
+        "year_made": 1997,
+        "style": "Modern",
+        "summary": "White travertine and metal architecture on a hilltop; emphasizes light, clean lines, and modern minimalism.",
+        "images": [
+            "imgs/resized/Getty_Center.jpg"
+        ]
+    },
+    {
+        "name": "Pacific Design Center (Blue Whale)",
+        "location": "West Hollywood",
+        "year_made": 1975,
+        "style": "Postmodern / Brutalist",
+        "summary": "Massive blue-glass and concrete building, sculptural and dominant on the skyline.",
+        "images": [
+            "imgs/resized/Pacific_Design_Center.jpg"
+        ]
+    },
+    {
+        "name": "Bradbury Building",
+        "location": "Los Angeles",
+        "year_made": 1893,
+        "style": "Victorian / Renaissance Revival",
+        "summary": "Iconic skylit atrium with ornate ironwork; featured in many films for its surreal interior.",
+        "images": [
+            "imgs/resized/Bradbury_Building.jpg"
+        ]
+    },
+    {
+        "name": "Los Angeles Times Building",
+        "location": "Los Angeles",
+        "year_made": 1935,
+        "style": "Art Deco",
+        "summary": "Streamlined exterior with vertical emphasis; a historic news and architecture landmark.",
+        "images": [
+            "imgs/resized/LA_Times.jpg"
+        ]
+    },
+    {
+        "name": "Oakland Museum of California",
+        "location": "Oakland",
+        "year_made": 1969,
+        "style": "Brutalist",
+        "summary": "Sunken terraces and massive concrete walls, blending brutalism with landscape architecture.",
+        "images": [
+            "imgs/resized/Oakland_Museum.jpg"
+        ]
+    },
+    {
+        "name": "UC Irvine Humanities Hall",
+        "location": "Irvine",
+        "year_made": 1970,
+        "style": "Brutalist",
+        "summary": "Rectilinear design with rough concrete surfaces and tight pedestrian corridors.",
+        "images": [
+            "imgs/resized/UCI_Humanities.jpg"
+        ]
+    }
+]
