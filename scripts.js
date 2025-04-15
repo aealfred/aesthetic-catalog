@@ -1,97 +1,51 @@
-/**
- * Data Catalog Project Starter Code - SEA Stage 2
- *
- * This file is where you should be doing most of your work. You should
- * also make changes to the HTML and CSS files, but we want you to prioritize
- * demonstrating your understanding of data structures, and you'll do that
- * with the JavaScript code you write in this file.
- *
- * The comments in this file are only to help you learn how the starter code
- * works. The instructions for the project are in the README. That said, here
- * are the three things you should do first to learn about the starter code:
- * - 1 - Change something small in index.html or style.css, then reload your
- *    browser and make sure you can see that change.
- * - 2 - On your browser, right click anywhere on the page and select
- *    "Inspect" to open the browser developer tools. Then, go to the "console"
- *    tab in the new window that opened up. This console is where you will see
- *    JavaScript errors and logs, which is extremely helpful for debugging.
- *    (These instructions assume you're using Chrome, opening developer tools
- *    may be different on other browsers. We suggest using Chrome.)
- * - 3 - Add another string to the titles array a few lines down. Reload your
- *    browser and observe what happens. You should see a fourth "card" appear
- *    with the string you added to the array, but a broken image.
- *
- */
+let allLocations = []
 
-const FRESH_PRINCE_URL =
-  "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
-const CURB_POSTER_URL =
-  "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
-const EAST_LOS_HIGH_POSTER_URL =
-  "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
+//JSON DATA
+fetch('ca_architecture_catalog_full.json')
+  .then(response => response.json())
+  .then(data => {
+    allLocations = data;
+    createCatalog(data);
+  })
+  .catch(error => console.error("Error loading JSON:", error));
 
-// This is an array of strings (TV show titles)
-let titles = [
-  "Fresh Prince of Bel Air",
-  "Curb Your Enthusiasm",
-  "East Los High",
-];
-// Your final submission should have much more data than this, and
-// you should use more than just an array of strings to store it all.
+function createCatalog(locations) {
+  const cardContainer = document.getElementById("catalog-container");
+  cardContainer.innerHTML = '';
+  locations.forEach((item, index) => {
+    console.log(`Rendering #${index + 1}: ${item.name}`);
 
-// This function adds cards the page to display the data in the array
-function showCards() {
-  const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = "";
-  const templateCard = document.querySelector(".card");
 
-  for (let i = 0; i < titles.length; i++) {
-    let title = titles[i];
+    const card = document.createElement('div')
+    card.className = 'catalog-item'
+    const img = document.createElement('img');
+    img.src = item.images[0]; 
+    img.alt = item.name;
+    img.className = 'catalog-image';
 
-    // This part of the code doesn't scale very well! After you add your
-    // own data, you'll need to do something totally different here.
-    let imageURL = "";
-    if (i == 0) {
-      imageURL = FRESH_PRINCE_URL;
-    } else if (i == 1) {
-      imageURL = CURB_POSTER_URL;
-    } else if (i == 2) {
-      imageURL = EAST_LOS_HIGH_POSTER_URL;
-    }
+ 
 
-    const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, imageURL); // Edit title and image
-    cardContainer.appendChild(nextCard); // Add new card to the container
+  card.appendChild(img);
+  card.innerHTML += `
+  <div class="catalog-title">${item.name}</div>
+  <div class="catalog-meta">${item.location} • ${item.style} • ${item.year_made}</div>
+  <p class="catalog-summary">${item.summary}</p>
+  `;
+  cardContainer.appendChild(card); // ADD NEW CARD TO CONTAINER
+  }); 
+}
+
+function filterCatalog() {
+  const styleFilter = document.getElementById('style-filter').value;
+  const locationFilter = document.getElementById('location-filter').value;
+  console.log('Filtering by Style ${styleFilter}, Location: ${locationFilter}');
+  let filteredLocations = allLocations;
+
+  if (styleFilter !== 'All') {
+    filteredLocations = filteredLocations.filter(location => location.style === styleFilter);
   }
-}
-
-function editCardContent(card, newTitle, newImageURL) {
-  card.style.display = "block";
-
-  const cardHeader = card.querySelector("h2");
-  cardHeader.textContent = newTitle;
-
-  const cardImage = card.querySelector("img");
-  cardImage.src = newImageURL;
-  cardImage.alt = newTitle + " Poster";
-
-  // You can use console.log to help you debug!
-  // View the output by right clicking on your website,
-  // select "Inspect", then click on the "Console" tab
-  console.log("new card:", newTitle, "- html: ", card);
-}
-
-// This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
-
-function quoteAlert() {
-  console.log("Button Clicked!");
-  alert(
-    "I guess I can kiss heaven goodbye, because it got to be a sin to look this good!"
-  );
-}
-
-function removeLastCard() {
-  titles.pop(); // Remove last item in titles array
-  showCards(); // Call showCards again to refresh
+  if (locationFilter !== 'All') {
+    filteredLocations = filteredLocations.filter(location => location.location === locationFilter);
+  }
+  createCatalog(filteredLocations);
 }
