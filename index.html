@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>California Architecture Catalog</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
-  <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
-      </div>
+  <h1>California Architecture Catalog</h1>
+  <div class="filter-controls">
+    <div>
+      <label for="style-filter">Filter by Style:</label>
+      <select id="style-filter" onchange="filterCatalog()">
+        <option value="All">All Styles</option>
+        <option value="Brutalist">Brutalist</option>
+        <option value="Modern">Modern</option>
+        <option value="Art Deco">Art Deco</option>
+        <option value="Post-Brutalist">Post-Brutalist</option>
+        <option value="Futurist / Modern">Futurist / Modern</option>
+        <option value="Beaux-Arts / Art Deco">Beaux-Arts / Art Deco</option>
+        <option value="Victorian / Renaissance Revival">Victorian / Renaissance Revival</option>
+      </select>
     </div>
-    <div class="footer">
-      <button onclick="quoteAlert();">Get A Quote!</button>
-      <button onclick="removeLastCard();">Remove A Card!</button>
+  
+    <div>
+      <label for="location-filter">Filter by Location:</label>
+      <select id="location-filter" onchange="filterCatalog()">
+        <option value="All">All Locations</option>
+        <option value="Berkeley">Berkeley</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="La Jolla">La Jolla</option>
+        <option value="Santa Clarita">Santa Clarita</option>
+        <option value="San Diego">San Diego</option>
+        <option value="San Rafael">San Rafael</option>
+        <option value="West Hollywood">West Hollywood</option>
+        <option value="Oakland">Oakland</option>
+        <option value="Irvine">Irvine</option>
+        <option value="San Francisco">San Francisco</option>
+      </select>
     </div>
-  </body>
+  </div>
+  
+  <div id="catalog-container"></div>
+  
+  <script src="scripts.js"></script>
+</body>
 </html>
