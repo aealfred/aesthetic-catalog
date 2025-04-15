@@ -1,70 +1,85 @@
-html,
 body {
+  font-family: 'Courier New', monospace;
+  background-color: #403d3d;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  color: #333;
 }
 
-.main-header {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding-bottom: 10px;
-}
-
-.title {
+h1 {
   text-align: center;
-  margin: 0;
-  font-size: 8em;
-  font-family: "Helvetica";
-  font-weight: normal;
-  color: white;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #ffe5a2;
 }
 
-#card-container {
+#catalog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.catalog-item {
+  background: rgb(169, 169, 163);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.catalog-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.catalog-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+ 
+}
+
+.catalog-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.catalog-meta {
+  font-size: 0.9rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+.catalog-summary {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+.filter-controls {
   display: flex;
+  gap: 10px;
+  color: rgb(194, 255, 255);
+  margin-bottom: 20px;
   justify-content: center;
-  margin: 20px;
 }
 
-.card {
-  width: 300px;
+.filter-controls button {
+  padding: 8px 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 5px;
-}
-
-.card-content {
-  padding: 20px;
-  font-family: "Verdana";
-  color: #777;
-}
-
-.card-content h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
-}
-
-button {
-  text-align: center;
-  background-color: #666;
-  border: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 40px;
-  border-radius: 10px;
-  color: white;
-  font-size: 22px;
+  background-color: #f9f9f9;
   cursor: pointer;
-  margin: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.filter-controls button:hover {
+  background-color: #eee;
 }
